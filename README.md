@@ -11,10 +11,8 @@
 - Display WiFi information with colored output.
 
 ## 🛠️ Installation
-
-```bash
-
-```
+- Download `netinfo` from the distribution.
+- Move `netinfo` to the `/usr/local/bin` directory.
 
 ## 🔮 Usage
 ```bash
