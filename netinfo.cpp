@@ -1,8 +1,11 @@
 #include <iostream>
 #include <cstdio>
+#include <cstring>
+#include <cstdlib>
 using namespace std;
 
 const string serverIPAddress = "208.67.222.222";
+const string version = "1.1.0";
 
 bool isNetworkAvailable()
 {
@@ -30,13 +33,11 @@ void printWiFiInfo()
     }
 }
 
-// Function to print text in green color
 void printGreenText(const string &text)
 {
     cout << "\033[1;32m" << text << "\033[0m";
 }
 
-// Function to print text in red color
 void printRedText(const string &text)
 {
     cout << "\033[1;31m" << text << "\033[0m";
@@ -51,8 +52,18 @@ void printState()
         printRedText("Not available\n");
 }
 
-int main()
+void printVersion()
 {
+    cout << "Netinfo v" << version << endl;
+}
+
+int main(int argc, char *argv[])
+{
+    if (argc > 1 && strcmp(argv[1], "-v") == 0)
+    {
+        printVersion();
+        return 0;
+    }
     printWiFiInfo();
     printState();
     return 0;
