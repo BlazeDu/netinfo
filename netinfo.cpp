@@ -5,7 +5,7 @@
 using namespace std;
 
 const string serverIPAddress = "208.67.222.222";
-const string version = "1.1.0";
+const string VERSION = "1.1.0";
 
 bool isNetworkAvailable()
 {
@@ -54,7 +54,7 @@ void printState()
 
 void printVersion()
 {
-    cout << "Netinfo v" << version << endl;
+    cout << "Netinfo v" << VERSION << endl;
 }
 
 int main(int argc, char *argv[])
